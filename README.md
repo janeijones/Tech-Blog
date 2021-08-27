@@ -26,7 +26,7 @@ Use the homepage to view other user's posts and add comments. <br>
 Logout once you are finished interacting <br>
 
 
-![mp4]https://user-images.githubusercontent.com/18485105/131162738-2ca6d0df-3987-4fa2-8683-18f2ef37db05.mp4
+https://user-images.githubusercontent.com/18485105/131162738-2ca6d0df-3987-4fa2-8683-18f2ef37db05.mp4
 
 ## License [![License](https://img.shields.io/badge/License-MIT-pink.svg)](https://opensource.org/licenses/MIT)
 <h3> MIT: </h3>
