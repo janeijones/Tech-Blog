@@ -1,0 +1,13 @@
+a {
+    color: #ba42ca;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #0dcce6;
+    text-decoration: underline;
+}
+
+.dashboard-style {
+    color: #828c96
+}
