@@ -15,7 +15,7 @@ router.get('/', withAuth, async (req, res) => { //get all the posts created by u
         const posts = postData.map((post) => post.get({ plain: true }))
         console.log(posts);
 
-        res.render('all-posts-admin', { layout: 'dashboard', posts, req.session.loggedIn: true });
+        res.render('all-posts-admin', { layout: 'dashboard', posts, loggedIn: true });
     } catch (err) {
         res.redirect('/')
     }
