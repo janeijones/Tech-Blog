@@ -1,8 +1,13 @@
+<h3> Update, Create, or Delete Posts</h3>
 <div class = "posts list-group">
-    {{each posts}}
+    {{#each posts}}
+    <div class="card">
         <a class = "list-item flex-row justify-space-between" href = "/dashboard/edit/{{id}}">
-        <span>{{title}}</span>
-        <span>{{format_date createdAt}}</span>
+        <span class = "card-header">{{title}} | {{format_date createdAt}}</span>
         </a>
+  <div class="card-body">
+    <p class="card-text">{{body}}</p>
+  </div>
+</div>
     {{/each}}
 </div>

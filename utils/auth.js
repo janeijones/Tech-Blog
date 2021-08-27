@@ -6,5 +6,5 @@ const withAuth = (req, res, next) => { //checks session, if not logged in, redir
     }
   };
     
-  module.exports = withAuth
+  module.exports = withAuth;
   

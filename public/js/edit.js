@@ -4,8 +4,8 @@ const btnDelete = document.querySelector('#btnDelete');
 const editFormHandler = async function(e){
     e.preventDefault()
 
-    const postTitle = document.querySelector('input[name="post-title"]').value;
-    const postBody = document.querySelector('textarea[name="post-body"]').value
+    const postTitle = document.querySelector("#post-title"); 
+    const postBody = document.querySelector("#post-body");
 
     await fetch(`/api/post/${postId}`, { //sends post
         method: 'PUT',

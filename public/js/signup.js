@@ -12,7 +12,7 @@ const signupFormHandler = async function(e) {
         method: 'POST',
         body: JSON.stringify({
             username: usernameEl.value,
-            password: passwordEl.valuem
+            password: passwordEl.value
         }),
         headers: { 'Content-Type': 'application/json' },
     });

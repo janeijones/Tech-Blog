@@ -1,10 +1,10 @@
 const postFormHandler = async function(e){
     e.preventDefault();
 
-    const postTitle = document.querySelector('input[name="post-title"]').value;
-    const postBody = document.querySelector('textarea[name="post-body"]').value;
-
-    await fetch('/api/post', {
+    const postTitle = document.querySelector("#post-title")
+    const postBody = document.querySelector("#post-body")
+ 
+        await fetch('/api/post', {
         method: 'POST',
         body: JSON.stringify({
             title: postTitle.value,
@@ -13,6 +13,6 @@ const postFormHandler = async function(e){
         headers: { 'Content-Type': 'application/json' },
     })
     document.location.replace('/dashboard')
-};
+}
 
 document.querySelector('#new-post-form').addEventListener('submit', postFormHandler);

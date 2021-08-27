@@ -6,7 +6,7 @@ const logoutHandler = async (req, res) => {
     });
 
     if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/login');
     } else {
         alert(response.statusText);
     }

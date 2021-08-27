@@ -13,8 +13,9 @@ router.get('/', withAuth, async (req, res) => { //get all the posts created by u
         });
 
         const posts = postData.map((post) => post.get({ plain: true }))
+        console.log(posts);
 
-        res.render('all-posts-admin', { layout: 'dashboard', posts, loggedIn: true });
+        res.render('all-posts-admin', { layout: 'dashboard', posts, req.session.loggedIn: true });
     } catch (err) {
         res.redirect('/')
     }
@@ -22,7 +23,7 @@ router.get('/', withAuth, async (req, res) => { //get all the posts created by u
 
 
 router.get('/new', withAuth, async (req,res) => { //user to create a post
-    res.render('new-post', { layout: 'dashboard', loggedIn: true });
+    res.render('new-posts', { layout: 'dashboard', loggedIn: true });
 });
 
 

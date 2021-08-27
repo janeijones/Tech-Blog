@@ -8,7 +8,7 @@ router.get('/', async (req, res) => { //gets all posts for homepage
         });
         const posts = postData.map((post) => post.get({ plain : true })); //take posts from db and convert to plain objs
 
-        res.render('all-posts', { posts });
+        res.render('all-posts', { layout: 'dashboard', posts, loggedIn: true});
     } catch (err) {
         res.status(500).json(err);
     }
@@ -29,7 +29,7 @@ router.get('/post/:id', async (req, res) => { //gets one posted comment
         if (postData) { // if post is found, render individual post
             const post = postData.get({ plain: true });
 
-            res.render('single-post', { post });
+            res.render('single-post', { post, loggedIn: true});
             
         } else {
             res.status(404).end();
@@ -55,6 +55,14 @@ router.get('/signup', (req,res) => {
     }
 
     res.render('signup');
+})
+
+router.get('/logout', (req, res) => {
+    if (!req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('login');
 })
 
 module.exports = router;
