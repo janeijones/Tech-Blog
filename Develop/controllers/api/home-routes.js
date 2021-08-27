@@ -13,3 +13,11 @@ router.get('/', async (req, res) => { //gets all posts for homepage
         res.status(500).json(err);
     }
 });
+
+router.get('/post/:id', async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id, {
+            
+        })
+    }
+})
