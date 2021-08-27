@@ -1,7 +1,7 @@
 const User = require('./User');
 const Post = require('./Post');
 const Comment = require('./Comment');
-
+//relationships for models
 Post.belongsTo(User, {
     foreignKey: 'userId',
     onDelete: 'CASCADE'
@@ -18,7 +18,7 @@ Comment.belongsTo(User, {
 });
 
 module.exports = {
-    User, 
     Comment,
+    User,
     Post
 };
