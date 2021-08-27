@@ -6,7 +6,7 @@ router.get('/', async (req, res) => { //gets all posts for homepage
         const postData = await Post.findAll({
             include: [User],
         });
-        const posts = postData.map((post) => post.get({ plain : true }));
+        const posts = postData.map((post) => post.get({ plain : true })); //take posts from db and convert to plain objs
 
         res.render('all-posts', { posts });
     } catch (err) {
