@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-body bg-primary">
+        <h5 class="col-sm-10 m-1 text-white">
+            Edit Post
+        </h5>
+    </div>
+    <div class="card-body">
+        <form id="edit-post-form">
+            <div class="mb-3">
+
+                <input type="hidden" id="post-id" name = "post-id" value="{{post.id}}" />
+
+                <label for="post-title" class="col-sm-2 col-form-label">Title</label>
+
+                <div class="col-sm-10">
+                    <input type="text" name="post-title" value = "{{post.title}}" class="form-input" />
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+                <label for="post-body" class="col-sm-2 col-form-label">Content</label>
+
+                <div class="col-sm-10">
+                    <textarea name = "post-body" type="text" class="form-input">{{post.body}}</textarea>
+                </div>
+
+            </div>
+            <div>
+                <button type="submit" id="btnUpdate" class="btn btn-primary">Update</button>
+                <button type="button" id="btnDelete" class="btn btn-primary">Delete</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<script src="/js/edit.js"></script>
