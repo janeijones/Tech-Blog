@@ -38,3 +38,10 @@ router.get('/post/:id', async (req, res) => { //gets one posted comment
         res.status(500). json(err);
     }
 });
+
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+})
