@@ -26,7 +26,7 @@ router.get('/new', withAuth, async (req,res) => { //user to create a post
 });
 
 
-router.get('/edit-post/:id', withAuth, async (req, res) => { //route to allow user to edit post by id
+router.get('/edit/:id', withAuth, async (req, res) => { //route to allow user to edit post by id
     try {
         const postData = await Post.findByPk(req.params.id)
 
